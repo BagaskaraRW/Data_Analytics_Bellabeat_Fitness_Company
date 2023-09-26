@@ -36,7 +36,7 @@ Stakeholders: <br>
 4.	Determine the credibility of the data <br>
 
 ### Deliverable
-Data Source: https://www.kaggle.com/arashnic/fitbit. <br> 
+**Data Source:** https://www.kaggle.com/arashnic/fitbit. <br> 
 The primary stakeholder encourages to use public data that explores smart device users’s daily habits. Fitbit Fitness Tracker Data is a dataset that contains s personal fitness tracker from thirty fitbit users. Thirty eligible Fitbit users consented to the submission of personal tracker data, including minute-level output for physical activity, heart rate, and sleep monitoring. It includes information about daily activity, steps, and heart rate that can be used to explore users’ habits.
 The dataset has 18 file in CSV format. Here’s the ROCCC of the data: <br>
 - **Reliable** <br>
@@ -58,7 +58,84 @@ Unknown.
 4.	Document the cleaning process <br>
 
 ### Deliverable
-Documentation of any cleaning or manipulation of data
+**Documentation:** any cleaning or manipulation of data <br>
+Prepare the environment (install) and load all library for data analysis.
+```
+#Install All Packages for analysis requirement
+install.packages("tidyverse")
+install.packages("skimr")
+install.packages("cowplot")
+install.packages("plotly")
+
+#Load all packages for analysis
+library(tidyverse)
+library(dplyr)
+library(lubridate)
+library(readr)
+library(ggplot2)
+library(skimr)
+library(cowplot)
+library(plotly)
+```
+Set path dataset, and load all main dataset for analysis and check header.
+```
+#Set path data
+setwd("E:/Universitas Gadjah Mada/Course/Coursera/Google Data Analyst/Course 8/CapstoneDataFromQuery/MsExcel")
+
+#Load dataset for preparing data
+#In this analysis, 4 dataset has choosen i.e. Daily Activity, Sleep Day, Weight Log, Hourly Step
+dailyActivity <- read.csv("Bellabeat Company - dailyActivity_merged.csv")
+sleepDay <- read.csv("Bellabeat Company - sleepDay_merged.csv")
+weightLog <- read.csv("Bellabeat Company - weightLogInfo_merged.csv")
+hourlyStep <- read.csv("Bellabeat Company - hourlySteps_merged.csv")
+
+#Check the header of data
+head(dailyActivity)
+head(sleepDay)
+head(weightLog)
+head(hourlyStep)
+```
+Checking NA value and duplicat row. Remove duplicated values from dataset for 4 table i.e. dailyActivity, sleepDay, weightLog, and hourlyStep.
+```
+#Check the missing value
+sum(is.na(dailyActivity))
+sum(is.na(sleepDay))
+sum(is.na(weightLog))
+sum(is.na(hourlyStep))
+
+#Check and remove the the duplicate value
+sum(duplicated(dailyActivity))
+sum(duplicated(sleepDay))
+sum(duplicated(weightLog))
+sleepDay <- sleepDay[!duplicated(sleepDay), ]
+sum(duplicated(sleepDay))
+```
+Preparing for merging dataframe. Mergered dataframe contain 3 tables: dailyActivity, sleepDay, and weightLog. The dataframe mergered based on 2 column i.e. Id, and ActivityDate. For checking final dimension of dataframe using ```dim()```. Final dimension of dataframe is 863 row and 27 column. 
+```
+#Add new column for the weekdays
+dailyActivity <- dailyActivity %>%
+  mutate(Weekday = weekdays(as.Date(ActivityDate, "%m/%d/%Y")))
+
+#Changing name of date column in sleep day dataframe
+sleepDay <- sleepDay %>%
+  rename("ActivityDate" = "Date")
+
+#Changing name of date column in weight log info dataframe
+weightLog <- weightLog %>%
+  rename("ActivityDate" = "Date")
+
+#Data Merger
+dataMerged1 <- merge(dailyActivity, sleepDay, by = c("Id","ActivityDate"), all=TRUE)
+dataMerged <- merge(dataMerged1, weightLog, by= c("Id", "ActivityDate"), all=TRUE)
+dim(dataMerged)
+head(dataMerged)
+
+dataMerged$Weekday <- factor(dataMerged$Weekday, 
+                                levels= c("Monday", "Tuesday", 
+                                          "Wednesday", "Thursday", 
+                                          "Friday", "Saturday", "Sunday"))
+```
+The dataset has 33 user data from daily activity, 24 from sleep and only 8 from weight. From using ```ggplot()``` bar graph, we can see how ofter the user record their data in a weeks.
 
 ## [4] Analyze
 
