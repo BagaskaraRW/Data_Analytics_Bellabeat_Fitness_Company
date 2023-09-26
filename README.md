@@ -135,7 +135,8 @@ dataMerged$Weekday <- factor(dataMerged$Weekday,
                                           "Wednesday", "Thursday", 
                                           "Friday", "Saturday", "Sunday"))
 ```
-The dataset has 33 user data from daily activity, 24 from sleep and only 8 from weight. From using ```ggplot()``` bar graph, we can see how ofter the user record their data in a weeks.
+The dataset has 33 user data from daily activity, 24 from sleep and only 8 from weight. From using ```ggplot()``` bar graph, we can see how ofter the user record their data in a weeks. <br>
+![image](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/issues/1#issue-1912623614)
 
 ## [4] Analyze
 
