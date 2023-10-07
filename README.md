@@ -171,8 +171,8 @@ dailyActivity %>%
                 SedentaryMinutes, TotalActivityMinutes, Calories) %>%
   summary()
 ```
-![dailyAnalysis_summary](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/00c807d7-775e-46ac-8b34-a4de0358ec22)
-Total Steps and Calories burn in a weekday shows in below fig. 
+![dailyAnalysis_summary](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/00c807d7-775e-46ac-8b34-a4de0358ec22)<br>
+Total Steps and Calories burn in a weekday shows in below fig. Bar chart shows that total step and calories tends to go down on Tuesday until saturday. 
 ```
 ggplot(data = dailyActivity, aes(x = Weekday, y = TotalSteps)) + 
   geom_bar(fill="#16213D", stat = "identity") +
@@ -183,6 +183,7 @@ ggplot(data = dailyActivity, aes(x = Weekday, y = Calories)) +
   labs(title = "Weekday vs Calories")
 ```
 ![TotalStepsOnAWeekday](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/195257fb-94a7-43fe-af1e-f573016c555e)
+![WeekdayVSCalories](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/d7eafb91-c86b-4d6e-bc5b-179bcdd24eac)
 
 ### Analysis on Sleep Day and Weight Log
 ### Hourly Analysis
