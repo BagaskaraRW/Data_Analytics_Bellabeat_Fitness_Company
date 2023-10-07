@@ -6,24 +6,25 @@ Capstone Project from Google Data Analytics Course
 #### [Tableau Dashboard]
 #### [Presentation]
 
-The analysis of this case study follow by six steps based on Google Data Analytics Courses:
-- :bulb: Ask
-- :memo: Prepare
-- ⚙️ Process
-- 🔍 Analyze
-- 📊 Share
-- Act
+The analysis of this case study follow by six steps based on Google Data Analytics:
+- 💡 [Ask](#1-ask)
+- 📝 [Prepare](#2-prepare)
+- ⚙️ [Process](#3-process)
+- 🔎 [Analyze](#4-analyze)
+- 📊 [Share](#5-share)
+- ⬆️ [Act](#6-act)
+  
 ## Introduction 
 Bellabeat is a High – tech manufacturer of health – focused product for women. Collecting data on activity, sleep, stress, and reproductive health has allowed Bellabeat to empower women with knowledge about their own health and habits. Since it was founded in 2013, Bellabeat has grown rapidly and quickly positioned itself as a tech – driven wellness company for women. Bellabeat has 5 product i.e. Bellabeat App, Leaf, Time, Spring, and Bellabeat Membership. Bellabeat is a successful small company, but they have the potential to become a larger player in the global smart device market. Marketing analyst team have been asked to focus one of Bellabeat’s products and analyze smart device data to gain insight into how consumers are using their smart devices. The insights that we discover will then help guide marketing strategy for the company.
 
 ## [1] Ask
-🔑### Key tasks
+### 🔑 Key tasks
 1.	Identify the business task
 2.	Consider key stakeholders <br>
 
 ### Deliverable
 A Clear statement of the business task <br>
-:page_with_curl: **Business task**: Analyze consumer data for gain insight and recommendations to reveal more opportunities for Bellabeat become a large player in the global smart device market. <br>
+📃**Business task**: Analyze consumer data for gain insight and recommendations to reveal more opportunities for Bellabeat become a large player in the global smart device market. <br>
 Stakeholders: <br>
 - Primary: Urska Srsen and Sando Mur as executive members
 - Secondary: Bellabeat marketing analytics team
@@ -36,7 +37,7 @@ Stakeholders: <br>
 4.	Determine the credibility of the data <br>
 
 ### Deliverable
-**Data Source:** https://www.kaggle.com/arashnic/fitbit. <br> 
+📁**Data Source:** https://www.kaggle.com/arashnic/fitbit. <br> 
 The primary stakeholder encourages to use public data that explores smart device users’s daily habits. Fitbit Fitness Tracker Data is a dataset that contains s personal fitness tracker from thirty fitbit users. Thirty eligible Fitbit users consented to the submission of personal tracker data, including minute-level output for physical activity, heart rate, and sleep monitoring. It includes information about daily activity, steps, and heart rate that can be used to explore users’ habits.
 The dataset has 18 file in CSV format. Here’s the ROCCC of the data: <br>
 - **Reliable** <br>
@@ -58,7 +59,7 @@ Unknown.
 4.	Document the cleaning process <br>
 
 ### Deliverable
-📷:**Documentation:** any cleaning or manipulation of data <br>
+📷**Documentation:** any cleaning or manipulation of data <br>
 Prepare the environment (install) and load all library for data analysis.
 ```
 #Install All Packages for analysis requirement
@@ -118,12 +119,12 @@ sum(duplicated(sleepDay))
 4.	Identify trends and relationship <br>
 
 ### Deliverable
-**Summary of Analysis** <br>
+💹**Summary of Analysis** <br>
 - [Weekly Record](#weekly-record)
-- Analysis on Daily Activity
-- Analysis on Sleep Day and Weight Log
-- Hourly Analysis
-- Interesting Insight
+- [Analysis on Daily Activity](#analysis-on-daily-activity)
+- [Analysis on Sleep Day and Weight Log](#analysis-on-sleep-day-and-weight-log)
+- [Hourly Analysis](#hourly-analysis)
+- [Interesting Insight](#interesting-insight)
 
 ### Weekly Record
 Preparing for merging dataframe. Mergered dataframe contain 3 tables: dailyActivity, sleepDay, and weightLog. The dataframe mergered based on 2 column i.e. Id, and ActivityDate. For checking final dimension of dataframe using ```dim()```. Final dimension of dataframe is 863 row and 27 column. 
@@ -160,7 +161,7 @@ dataMerged$Weekday <- factor(dataMerged$Weekday,
 The dataset has 33 user data from dailyActivity, 24 user from sleepDay and only 8 user from weightLog. From using ```ggplot()``` bar graph, we can see how ofter the user record their data in a weeks. <br>
 ![Daily Activity Record During a Weeks](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/42705e73-5e4a-455f-9228-44392ad6043c)
 ### Analysis on Daily Activity
-Summary on daily activity. 
+Summary on daily activity. We can see the min, mean, max value of each column in Daily Activity dataset. The summary shows that average steps is 8310 step with the max step is more than 4 times avg i.e. 36000> step. Almost 21 hour activity minutes in one day and burn calories with avg 2360 Cal.
 ```
 ## Daily Activity Statistic Summary ##
 dailyActivity %>%
@@ -171,6 +172,19 @@ dailyActivity %>%
   summary()
 ```
 ![dailyAnalysis_summary](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/00c807d7-775e-46ac-8b34-a4de0358ec22)
+Total Steps and Calories burn in a weekday shows in below fig. 
+```
+ggplot(data = dailyActivity, aes(x = Weekday, y = TotalSteps)) + 
+  geom_bar(fill="#16213D", stat = "identity") +
+  labs(title = "Total Steps on a Weekday")
+
+ggplot(data = dailyActivity, aes(x = Weekday, y = Calories)) +
+  geom_bar(fill = "#3D989B", stat = "identity") +
+  labs(title = "Weekday vs Calories")
+```
+### Analysis on Sleep Day and Weight Log
+### Hourly Analysis
+### Interesting Insight
 ## [5] Share
 
 ## [6] Act
