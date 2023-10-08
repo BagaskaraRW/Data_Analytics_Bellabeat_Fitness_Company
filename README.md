@@ -182,8 +182,20 @@ ggplot(data = dailyActivity, aes(x = Weekday, y = Calories)) +
   geom_bar(fill = "#3D989B", stat = "identity") +
   labs(title = "Weekday vs Calories")
 ```
-![TS+C](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/0df8b0fa-d128-436d-81cb-24a398b5c1b0)
+![TS+C](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/75449747-1fbd-482a-887e-fce051e2abdb)
+Percentation of user activity minutes seperate into Very Active, Fairly Active, Lightly Active, and Sedentary. Sedentary minutes give the most higher percentage in total activity minutes with 79.41%.
+```
+totalActMin <- sum(dailyActivity$TotalActivityMinutes)
+veryActMin <- sum(dailyActivity$VeryActiveMinutes)
+fairActMin <- sum(dailyActivity$FairlyActiveMinutes)
+lightActMin <- sum(dailyActivity$LightlyActiveMinutes)
+sedenActMin <- sum(dailyActivity$SedentaryMinutes)
 
+veryMinPer <- (veryActMin/totalActMin)*100
+fairMinPer <- (fairActMin/totalActMin)*100
+lightMinPer <- (lightActMin/totalActMin)*100
+sedenMinPer <- (sedenActMin/totalActMin)*100
+```
 ### Analysis on Sleep Day and Weight Log
 ### Hourly Analysis
 ### Interesting Insight
