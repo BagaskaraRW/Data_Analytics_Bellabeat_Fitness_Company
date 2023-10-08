@@ -185,17 +185,20 @@ ggplot(data = dailyActivity, aes(x = Weekday, y = Calories)) +
 ![TS+C](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/75449747-1fbd-482a-887e-fce051e2abdb)
 Percentation of user activity minutes seperate into Very Active, Fairly Active, Lightly Active, and Sedentary. Sedentary minutes give the most higher percentage in total activity minutes with 79.41%.
 ```
-totalActMin <- sum(dailyActivity$TotalActivityMinutes)
-veryActMin <- sum(dailyActivity$VeryActiveMinutes)
-fairActMin <- sum(dailyActivity$FairlyActiveMinutes)
-lightActMin <- sum(dailyActivity$LightlyActiveMinutes)
-sedenActMin <- sum(dailyActivity$SedentaryMinutes)
+ActMinPer <- data.frame(
+  Level = c("Very Active", "Fairly", "Light", "Sedentary"),
+  Value = c(veryMinPer, fairMinPer, lightMinPer, sedenMinPer))
 
-veryMinPer <- (veryActMin/totalActMin)*100
-fairMinPer <- (fairActMin/totalActMin)*100
-lightMinPer <- (lightActMin/totalActMin)*100
-sedenMinPer <- (sedenActMin/totalActMin)*100
+plot_ly(ActMinPer, labels = ~Level, values = ~Value, type = "pie", 
+        textposition = "outside", textinfo = "label+percent", 
+        marker=list(colors=c("#4ADEDE", "#797EF6", "#1AA7EC","#1E2F97"),
+                    line = list(color = '#FFFFFF', width = 2))) %>%
+  layout(title = "Activity Level Minutes Percentage",
+         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
 ```
+![actPer](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/397eefd9-f3a7-4c20-8226-24a2f5cda767)
+
 ### Analysis on Sleep Day and Weight Log
 ### Hourly Analysis
 ### Interesting Insight
