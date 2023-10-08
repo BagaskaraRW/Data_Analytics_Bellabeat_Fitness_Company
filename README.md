@@ -182,8 +182,7 @@ ggplot(data = dailyActivity, aes(x = Weekday, y = Calories)) +
   geom_bar(fill = "#3D989B", stat = "identity") +
   labs(title = "Weekday vs Calories")
 ```
-![TotalStepsOnAWeekday](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/195257fb-94a7-43fe-af1e-f573016c555e)
-![WeekdayVSCalories](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/d7eafb91-c86b-4d6e-bc5b-179bcdd24eac)
+![TS+C](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/0df8b0fa-d128-436d-81cb-24a398b5c1b0)
 
 ### Analysis on Sleep Day and Weight Log
 ### Hourly Analysis
