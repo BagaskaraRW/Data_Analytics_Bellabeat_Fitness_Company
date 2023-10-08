@@ -200,6 +200,8 @@ plot_ly(ActMinPer, labels = ~Level, values = ~Value, type = "pie",
 ![actPer](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/397eefd9-f3a7-4c20-8226-24a2f5cda767)
 
 ### Analysis on Sleep Day and Weight Log
+Sleep day summary
+![TSR+TMA](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/9860be5c-d3ea-4cc3-a4af-d162a9d9f563)
 ### Hourly Analysis
 ### Interesting Insight
 ## [5] Share
