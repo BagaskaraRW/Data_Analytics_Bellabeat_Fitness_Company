@@ -222,7 +222,7 @@ ggplot(data = hourlyStep, aes(x = Time, y = StepTotal, fill=Time)) +
   geom_bar(stat="identity") +
   labs(title = "Step in a day", x = "Hour", y = "Total Step")
 ```
-
+![HourlyStep](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/a1df063d-da18-457d-91ab-3d2781818dbd)
 ### Interesting Insight
 ## [5] Share
 
