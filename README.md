@@ -214,10 +214,17 @@ TMA <- ggplot(data = sleepDay, aes(x = Weekday, y= TotalMinutesAsleep)) +
 ggarrange(TSR, TMA)
 ```
 ![TSR+TMA](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/9860be5c-d3ea-4cc3-a4af-d162a9d9f563)
+```
+ggplot(dataMerged, aes(x = TotalSteps, y = BMI, color = Calories)) +
+  geom_point() +
+  geom_smooth(method = "loess", formula = "y ~ x", stat = "smooth") +
+  scale_color_gradient(low = "blue", high = "green")
+```
 ### Hourly Analysis
 The bar chart below shows user total step hourly in a day. User take more step at 8 AM until 10 PM.
 ```
 hourlyStep$Time <- format(as.POSIXct(hourlyStep$Time,format='%I:%M:%S %p'),format="%H")
+
 ggplot(data = hourlyStep, aes(x = Time, y = StepTotal, fill=Time)) + 
   geom_bar(stat="identity") +
   labs(title = "Step in a day", x = "Hour", y = "Total Step")
