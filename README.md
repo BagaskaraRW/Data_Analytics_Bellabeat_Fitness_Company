@@ -112,7 +112,7 @@ sleepDay <- sleepDay[!duplicated(sleepDay), ]
 sum(duplicated(sleepDay))
 ```
 ## [4] Analyze
-### Key tasks
+### 🔑 Key tasks
 1.	Aggregate your data so it’s useful and accessible
 2.	Organize and format your data
 3.	Perform calculations
@@ -231,6 +231,7 @@ ggplot(data = hourlyStep, aes(x = Time, y = StepTotal, fill=Time)) +
 ```
 ![HourlyStep](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/a1df063d-da18-457d-91ab-3d2781818dbd)
 ### Interesting Insight
+
 ## [5] Share
 
 ## [6] Act
