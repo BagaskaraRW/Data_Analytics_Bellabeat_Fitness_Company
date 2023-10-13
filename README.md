@@ -239,6 +239,13 @@ ggplot(data = dailyActivity, aes(x = TotalSteps, y = Calories, color = TotalActi
   labs(title = "Total Steps vs Calories", x = "Total Step", y = "Calories")
 ```
 ![TotalStepsVSCalories](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/7c8e05ed-3cf9-4e97-ab89-17cb6906b7b0)
+```
+ggplot(data = sleepDay, aes(x = TotalTimeInBed, y =TotalMinutesAsleep)) + 
+  geom_point(alpha = 0.50) +
+  geom_smooth(method = "loess", formula = "y ~ x", stat = "smooth") +
+  labs(title = "Time in Bed vs Minute Asleep", x = "Total Time in Bed", y = "Total Minutes Asleep")
+```
+![TimeInBedVSMinutesAsleep](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/656065ed-fc86-439f-9990-ac00cb00b99f)
 ## [5] Share
 
 ## [6] Act
