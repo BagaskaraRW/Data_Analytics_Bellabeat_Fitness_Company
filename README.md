@@ -1,5 +1,4 @@
 # Data Analytics: Bellabeat Fitness Company
-Capstone Project from Google Data Analytics Course
 
 #### Author: Rakha Wisnu Bagaskara
 #### Date: 23 Sept, 2023
@@ -231,6 +230,7 @@ ggplot(data = hourlyStep, aes(x = Time, y = StepTotal, fill=Time)) +
 ```
 ![HourlyStep](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/a1df063d-da18-457d-91ab-3d2781818dbd)
 ### Interesting Insight
+Total Steps as independent variable and Calories as dependent variable produce a fairly linear graph. It means that total step from user in a daily directly proportional to calories burned. However, total minutes of activity showed no relationship with calories burned. This could be due to the total minutes used representing 79% sedentary activity.
 ```
 ggplot(data = dailyActivity, aes(x = TotalSteps, y = Calories, color = TotalActivityMinutes)) + 
   stat_smooth(method = lm) +
