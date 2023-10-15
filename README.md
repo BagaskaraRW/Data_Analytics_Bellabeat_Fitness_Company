@@ -199,7 +199,7 @@ plot_ly(ActMinPer, labels = ~Level, values = ~Value, type = "pie",
 ![actPer](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/397eefd9-f3a7-4c20-8226-24a2f5cda767)
 
 ### Analysis on Sleep Day and Weight Log
-Analysis on sleep record and total minutes asleep. The bar chart shows total minutes asleep have a directly proportional to total sleep record.
+Analysis on sleep record and total minutes asleep. The bar chart shows total minutes asleep have a directly proportional to total sleep record.<br>
 ![sleepDay_summary](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/41cbf8a7-e736-4b85-be42-1784e934ff7b)
 ```
 TSR <- ggplot(data = sleepDay, aes(x = Weekday, y= TotalSleepRecords)) +
