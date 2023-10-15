@@ -243,6 +243,7 @@ ggplot(data = dailyActivity, aes(x = TotalSteps, y = Calories, color = TotalActi
 calories_vs_actMin <- lm(Calories ~ TotalActivityMinutes, data = dailyActivity)
 summary(calories_vs_actMin)
 ```
+![lm(Cal~ActMin)](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/fcd3e55e-802c-49d8-ba20-a88f734950fe)
 ![CaloriesVSActivityAll](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/290c1477-a05a-4260-93fa-804dbacb0d14) 
 ![TotalStepsVSActivityMinAll](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/985e198a-6331-41cc-8d72-a5e28db13b9c)
 ```
@@ -252,6 +253,11 @@ ggplot(data = sleepDay, aes(x = TotalTimeInBed, y =TotalMinutesAsleep)) +
   labs(title = "Time in Bed vs Minute Asleep", x = "Total Time in Bed", y = "Total Minutes Asleep")
 ```
 ![TimeInBedVSMinutesAsleep](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/656065ed-fc86-439f-9990-ac00cb00b99f)
+```
+minSleep_vs_minBed <- lm(TotalMinutesAsleep ~ TotalTimeInBed, data = dataMerged)
+summary(minSleep_vs_minBed)
+```
+
 ## [5] Share
 
 ## [6] Act
