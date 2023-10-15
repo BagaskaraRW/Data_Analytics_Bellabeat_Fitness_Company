@@ -257,6 +257,7 @@ ggplot(data = sleepDay, aes(x = TotalTimeInBed, y =TotalMinutesAsleep)) +
 minSleep_vs_minBed <- lm(TotalMinutesAsleep ~ TotalTimeInBed, data = dataMerged)
 summary(minSleep_vs_minBed)
 ```
+![lm(TMA~TIB)](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/274fd20c-5c8b-45bb-95ef-bb75ef80e512)
 
 ## [5] Share
 
