@@ -2,7 +2,7 @@
 
 #### Author: Rakha Wisnu Bagaskara
 #### Date: 23 Sept, 2023
-#### [Tableau Dashboard]
+#### [Tableau Dashboard](https://public.tableau.com/shared/W4YXW3HJ8?:display_count=n&:origin=viz_share_link)
 #### [Presentation]
 
 The analysis of this case study follow by six steps based on Google Data Analytics:
@@ -213,12 +213,14 @@ TMA <- ggplot(data = sleepDay, aes(x = Weekday, y= TotalMinutesAsleep)) +
 ggarrange(TSR, TMA)
 ```
 ![TSR+TMA](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/9860be5c-d3ea-4cc3-a4af-d162a9d9f563)
+Based on Kasper Salin,, et al research (2017) about Changes in Daily Steps and Body Mass Index and Waist to Height Ratio during Four Year Follow-Up in Adults: Cardiovascular Risk in Young Finns Study, Recent studies using objective measurements of PA have found that short term changes in daily steps do not influence body mass index (BMI). The chart below shows fairly constant values for BMI at all calorie levels and total steps performed by the user.
 ```
 ggplot(dataMerged, aes(x = TotalSteps, y = BMI, color = Calories)) +
   geom_point() +
   geom_smooth(method = "loess", formula = "y ~ x", stat = "smooth") +
   scale_color_gradient(low = "blue", high = "green")
 ```
+![TS~BMI](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/a865602d-5a84-4b02-98c8-1e459834bc9a)
 ### Hourly Analysis
 The bar chart below shows user total step hourly in a day. User take more step at 8 AM until 10 PM.
 ```
@@ -239,6 +241,7 @@ ggplot(data = dailyActivity, aes(x = TotalSteps, y = Calories, color = TotalActi
   labs(title = "Total Steps vs Calories", x = "Total Step", y = "Calories")
 ```
 ![TotalStepsVSCalories](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/7c8e05ed-3cf9-4e97-ab89-17cb6906b7b0)
+lm is used to fit linear models. It can be used to carry out regression, single stratum analysis of variance and analysis of covariance[4]. We want to know the relationship between 2 variable. In this case, we looking for R-Squared value from calories and activity minutes. The result shown below with R-Squared value is 0.0164. it can be said, the two variables do not have a linear relationship. In the figure it can also be seen that the distribution of data at each point where activity minutes vary does not show a linear relationship with calories, but rather the total steps taken by the user.
 ```
 calories_vs_actMin <- lm(Calories ~ TotalActivityMinutes, data = dailyActivity)
 summary(calories_vs_actMin)
