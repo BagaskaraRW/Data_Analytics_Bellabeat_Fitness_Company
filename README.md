@@ -219,7 +219,7 @@ ggplot(dataMerged, aes(x = TotalSteps, y = BMI, color = Calories)) +
   geom_smooth(method = "loess", formula = "y ~ x", stat = "smooth") +
   scale_color_gradient(low = "blue", high = "green")
 ```
-![TS~BMI](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/a865602d-5a84-4b02-98c8-1e459834bc9a)
+![TS~BMI](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/ff8709da-7189-4ab9-8709-b50a8a221972)
 ### Hourly Analysis
 The bar chart below shows user total step hourly in a day. User take more step at 8 AM until 10 PM.
 ```
