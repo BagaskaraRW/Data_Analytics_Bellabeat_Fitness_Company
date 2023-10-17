@@ -229,7 +229,7 @@ ggplot(data = hourlyStep, aes(x = Time, y = StepTotal, fill=Time)) +
   geom_bar(stat="identity") +
   labs(title = "Step in a day", x = "Hour", y = "Total Step")
 ```
-![HourlyStep](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/a1df063d-da18-457d-91ab-3d2781818dbd)
+![HourlyStep](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/b190ba22-4842-4173-a9f2-8120ab3e82dd)
 ### Interesting Insight
 Total Steps as independent variable and Calories as dependent variable produce a fairly linear graph. It means that total step from user in a daily directly proportional to calories burned. However, total minutes of activity showed no relationship with calories burned. This could be due to the total minutes used representing 79% sedentary activity.
 ```
