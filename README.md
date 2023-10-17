@@ -195,7 +195,7 @@ plot_ly(ActMinPer, labels = ~Level, values = ~Value, type = "pie",
          xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
          yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
 ```
-![actPer](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/397eefd9-f3a7-4c20-8226-24a2f5cda767)
+![actPer](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/db95dcc8-4f41-443b-931e-e32266cd4369)
 
 ### Analysis on Sleep Day and Weight Log
 Analysis on sleep record and total minutes asleep. The bar chart shows total minutes asleep have a directly proportional to total sleep record.<br>
