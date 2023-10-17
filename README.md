@@ -170,7 +170,7 @@ dailyActivity %>%
                 SedentaryMinutes, TotalActivityMinutes, Calories) %>%
   summary()
 ```
-![dailyAnalysis_summary](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/00c807d7-775e-46ac-8b34-a4de0358ec22)<br>
+![dailyAnalysis_summary](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/f69c0dbe-2ce6-4f48-8c0a-b9382a34ae24)<br>
 Total Steps and Calories burn in a weekday shows in below fig. Bar chart shows that total step and calories tends to go down on Tuesday until saturday. 
 ```
 ggplot(data = dailyActivity, aes(x = Weekday, y = TotalSteps)) + 
