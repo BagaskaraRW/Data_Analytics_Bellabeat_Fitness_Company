@@ -251,7 +251,7 @@ The graph below shows the relationship of calories burned in various activity mi
 ![CaloriesVSActivityAll](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/fa17216b-4dfd-4dc2-b630-208c719e83b0)
 
 This graph shows the relationship between the total steps taken by the user and the total activity minutes at each activity level. The graph covers total steps taken from 0 to ±17000. The data is spread across total steps for activity minutes. Users spent a total of 600 to 1200 minutes in sedentary minutes. In addition, users also spent 1 to 2 hours on fairly active or very active minutes.
-![TotalStepsVSActivityMinAll](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/985e198a-6331-41cc-8d72-a5e28db13b9c)
+![TotalStepsVSActivityMinAll](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/7e4b3b54-a634-40c4-8731-339a797329aa)
 
 ```
 ggplot(data = sleepDay, aes(x = TotalTimeInBed, y =TotalMinutesAsleep)) + 
