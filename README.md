@@ -239,7 +239,7 @@ ggplot(data = dailyActivity, aes(x = TotalSteps, y = Calories, color = TotalActi
   scale_color_gradient(low = "red", high = "blue") +
   labs(title = "Total Steps vs Calories", x = "Total Step", y = "Calories")
 ```
-![TotalStepsVSCalories](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/7c8e05ed-3cf9-4e97-ab89-17cb6906b7b0)
+![TotalStepsVSCalories](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/c8b365d9-35a4-4c95-b3ef-001767cfe963)
 lm is used to fit linear models. It can be used to carry out regression, single stratum analysis of variance and analysis of covariance[2]. We want to know the relationship between 2 variable. In this case, we looking for R-Squared value from calories and activity minutes. The result shown below with R-Squared value is 0.0164. it can be said, the two variables do not have a linear relationship. In the figure it can also be seen that the distribution of data at each point where activity minutes vary does not show a linear relationship with calories, but rather the total steps taken by the user.
 ```
 calories_vs_actMin <- lm(Calories ~ TotalActivityMinutes, data = dailyActivity)
