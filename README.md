@@ -259,7 +259,7 @@ ggplot(data = sleepDay, aes(x = TotalTimeInBed, y =TotalMinutesAsleep)) +
   geom_smooth(method = "loess", formula = "y ~ x", stat = "smooth") +
   labs(title = "Time in Bed vs Minute Asleep", x = "Total Time in Bed", y = "Total Minutes Asleep")
 ```
-![TimeInBedVSMinutesAsleep](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/656065ed-fc86-439f-9990-ac00cb00b99f)
+![TimeInBedVSMinutesAsleep](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/b6eb2fac-68cb-47bd-a987-4e58d51f3944)
 ```
 minSleep_vs_minBed <- lm(TotalMinutesAsleep ~ TotalTimeInBed, data = dataMerged)
 summary(minSleep_vs_minBed)
