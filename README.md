@@ -245,9 +245,11 @@ lm is used to fit linear models. It can be used to carry out regression, single 
 calories_vs_actMin <- lm(Calories ~ TotalActivityMinutes, data = dailyActivity)
 summary(calories_vs_actMin)
 ```
-![lm(Cal~ActMin)](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/fcd3e55e-802c-49d8-ba20-a88f734950fe)
+![lm(Cal~ActMin)](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/262c9f30-f726-4700-941a-b26bbe0482ba)
+
 The graph below shows the relationship of calories burned in various activity minutes. Majority the data obtained is from users with calories used in the range of 1500 cal to 3500 cal. According to the article by NHS UK, an ideal daily intake of calories varies depending on age, metabolism and levels of physical activity, among other things. Generally, the recommended daily calorie intake is 2,000 calories a day for women and 2,500 for men [3]. Users in the dataset also spend activity time in the range of 7 to 15 hours. At calories over 3500, the graph shows an increase in fairly active and very active, while a decrease in sedentary minutes. This shows that more calories are used or burned in users who do more activities in fairly active or very active and less in sedentary minutes.
 ![CaloriesVSActivityAll](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/290c1477-a05a-4260-93fa-804dbacb0d14)
+
 This graph shows the relationship between the total steps taken by the user and the total activity minutes at each activity level. The graph covers total steps taken from 0 to ±17000. The data is spread across total steps for activity minutes. Users spent a total of 600 to 1200 minutes in sedentary minutes. In addition, users also spent 1 to 2 hours on fairly active or very active minutes.
 ![TotalStepsVSActivityMinAll](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/985e198a-6331-41cc-8d72-a5e28db13b9c)
 
