@@ -267,7 +267,7 @@ summary(minSleep_vs_minBed)
 
 ## [5] Share
 ### Tableau Dashboard 
-![image](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/f50e6bef-cad5-47ee-b924-8669d9382396)
+![image](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/86f2068b-3cd1-46e3-9f0e-70fa6dc6a700)
 Link: [Tableau Dashboard](https://public.tableau.com/shared/W4YXW3HJ8?:display_count=n&:origin=viz_share_link).
 ## [6] Act
 
