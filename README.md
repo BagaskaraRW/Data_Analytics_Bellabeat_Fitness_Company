@@ -3,7 +3,6 @@
 #### Author: Rakha Wisnu Bagaskara
 #### Date: 23 Sept, 2023
 #### [Tableau Dashboard](https://public.tableau.com/shared/W4YXW3HJ8?:display_count=n&:origin=viz_share_link)
-#### [Presentation]
 
 The analysis of this case study follow by six steps based on Google Data Analytics:
 - 💡 [Ask](#1-ask)
