@@ -211,7 +211,7 @@ TMA <- ggplot(data = sleepDay, aes(x = Weekday, y= TotalMinutesAsleep)) +
 
 ggarrange(TSR, TMA)
 ```
-![TSR+TMA](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/9860be5c-d3ea-4cc3-a4af-d162a9d9f563)
+![TSR+TMA](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/a6810199-8c3d-48c2-95d2-c1ea483eeb9d)
 Based on Kasper Salin,, et al research about Changes in Daily Steps and Body Mass Index and Waist to Height Ratio during Four Year Follow-Up in Adults: Cardiovascular Risk in Young Finns Study, Recent studies using objective measurements of PA have found that short term changes in daily steps do not influence body mass index (BMI)[1]. The chart below shows fairly constant values for BMI at all calorie levels and total steps performed by the user.
 ```
 ggplot(dataMerged, aes(x = TotalSteps, y = BMI, color = Calories)) +
