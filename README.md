@@ -230,6 +230,7 @@ ggplot(data = hourlyStep, aes(x = Time, y = StepTotal, fill=Time)) +
   labs(title = "Step in a day", x = "Hour", y = "Total Step")
 ```
 ![HourlyStep](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/b190ba22-4842-4173-a9f2-8120ab3e82dd)
+
 ### Interesting Insight
 Total Steps as independent variable and Calories as dependent variable produce a fairly linear graph. It means that total step from user in a daily directly proportional to calories burned. However, total minutes of activity showed no relationship with calories burned. This could be due to the total minutes used representing 79% sedentary activity.
 ```
@@ -240,6 +241,7 @@ ggplot(data = dailyActivity, aes(x = TotalSteps, y = Calories, color = TotalActi
   labs(title = "Total Steps vs Calories", x = "Total Step", y = "Calories")
 ```
 ![TotalStepsVSCalories](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/c8b365d9-35a4-4c95-b3ef-001767cfe963)
+
 lm is used to fit linear models. It can be used to carry out regression, single stratum analysis of variance and analysis of covariance[2]. We want to know the relationship between 2 variable. In this case, we looking for R-Squared value from calories and activity minutes. The result shown below with R-Squared value is 0.0164. it can be said, the two variables do not have a linear relationship. In the figure it can also be seen that the distribution of data at each point where activity minutes vary does not show a linear relationship with calories, but rather the total steps taken by the user.
 ```
 calories_vs_actMin <- lm(Calories ~ TotalActivityMinutes, data = dailyActivity)
@@ -253,6 +255,7 @@ The graph below shows the relationship of calories burned in various activity mi
 This graph shows the relationship between the total steps taken by the user and the total activity minutes at each activity level. The graph covers total steps taken from 0 to ±17000. The data is spread across total steps for activity minutes. Users spent a total of 600 to 1200 minutes in sedentary minutes. In addition, users also spent 1 to 2 hours on fairly active or very active minutes.
 ![TotalStepsVSActivityMinAll](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/7e4b3b54-a634-40c4-8731-339a797329aa)
 
+The graph below shows the relationship between the time users spend on bed and the minutes of sleep spent. In general, it can be seen that the relationship between the two is linear or directly proportional. This shows that the majority of the time that users spend on bed is resting or sleeping.
 ```
 ggplot(data = sleepDay, aes(x = TotalTimeInBed, y =TotalMinutesAsleep)) + 
   geom_point(alpha = 0.50) +
@@ -260,6 +263,8 @@ ggplot(data = sleepDay, aes(x = TotalTimeInBed, y =TotalMinutesAsleep)) +
   labs(title = "Time in Bed vs Minute Asleep", x = "Total Time in Bed", y = "Total Minutes Asleep")
 ```
 ![TimeInBedVSMinutesAsleep](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/b6eb2fac-68cb-47bd-a987-4e58d51f3944)
+
+This is also supported through the lm method analysis in the available packages. The R-Squared value obtained is 0.8654, which shows that the two variables have a fairly strong and directly proportional relationship.
 ```
 minSleep_vs_minBed <- lm(TotalMinutesAsleep ~ TotalTimeInBed, data = dataMerged)
 summary(minSleep_vs_minBed)
