@@ -213,7 +213,7 @@ TMA <- ggplot(data = sleepDay, aes(x = Weekday, y= TotalMinutesAsleep)) +
 ggarrange(TSR, TMA)
 ```
 ![TSR+TMA](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/9860be5c-d3ea-4cc3-a4af-d162a9d9f563)
-Based on Kasper Salin,, et al research (2017) about Changes in Daily Steps and Body Mass Index and Waist to Height Ratio during Four Year Follow-Up in Adults: Cardiovascular Risk in Young Finns Study, Recent studies using objective measurements of PA have found that short term changes in daily steps do not influence body mass index (BMI). The chart below shows fairly constant values for BMI at all calorie levels and total steps performed by the user.
+Based on Kasper Salin,, et al research about Changes in Daily Steps and Body Mass Index and Waist to Height Ratio during Four Year Follow-Up in Adults: Cardiovascular Risk in Young Finns Study, Recent studies using objective measurements of PA have found that short term changes in daily steps do not influence body mass index (BMI)[1]. The chart below shows fairly constant values for BMI at all calorie levels and total steps performed by the user.
 ```
 ggplot(dataMerged, aes(x = TotalSteps, y = BMI, color = Calories)) +
   geom_point() +
@@ -241,14 +241,17 @@ ggplot(data = dailyActivity, aes(x = TotalSteps, y = Calories, color = TotalActi
   labs(title = "Total Steps vs Calories", x = "Total Step", y = "Calories")
 ```
 ![TotalStepsVSCalories](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/7c8e05ed-3cf9-4e97-ab89-17cb6906b7b0)
-lm is used to fit linear models. It can be used to carry out regression, single stratum analysis of variance and analysis of covariance[4]. We want to know the relationship between 2 variable. In this case, we looking for R-Squared value from calories and activity minutes. The result shown below with R-Squared value is 0.0164. it can be said, the two variables do not have a linear relationship. In the figure it can also be seen that the distribution of data at each point where activity minutes vary does not show a linear relationship with calories, but rather the total steps taken by the user.
+lm is used to fit linear models. It can be used to carry out regression, single stratum analysis of variance and analysis of covariance[2]. We want to know the relationship between 2 variable. In this case, we looking for R-Squared value from calories and activity minutes. The result shown below with R-Squared value is 0.0164. it can be said, the two variables do not have a linear relationship. In the figure it can also be seen that the distribution of data at each point where activity minutes vary does not show a linear relationship with calories, but rather the total steps taken by the user.
 ```
 calories_vs_actMin <- lm(Calories ~ TotalActivityMinutes, data = dailyActivity)
 summary(calories_vs_actMin)
 ```
 ![lm(Cal~ActMin)](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/fcd3e55e-802c-49d8-ba20-a88f734950fe)
-![CaloriesVSActivityAll](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/290c1477-a05a-4260-93fa-804dbacb0d14) 
+The graph below shows the relationship of calories burned in various activity minutes. Majority the data obtained is from users with calories used in the range of 1500 cal to 3500 cal. According to the article by NHS UK, an ideal daily intake of calories varies depending on age, metabolism and levels of physical activity, among other things. Generally, the recommended daily calorie intake is 2,000 calories a day for women and 2,500 for men [3]. Users in the dataset also spend activity time in the range of 7 to 15 hours. At calories over 3500, the graph shows an increase in fairly active and very active, while a decrease in sedentary minutes. This shows that more calories are used or burned in users who do more activities in fairly active or very active and less in sedentary minutes.
+![CaloriesVSActivityAll](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/290c1477-a05a-4260-93fa-804dbacb0d14)
+This graph shows the relationship between the total steps taken by the user and the total activity minutes at each activity level. The graph covers total steps taken from 0 to ±17000. The data is spread across total steps for activity minutes. Users spent a total of 600 to 1200 minutes in sedentary minutes. In addition, users also spent 1 to 2 hours on fairly active or very active minutes.
 ![TotalStepsVSActivityMinAll](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/985e198a-6331-41cc-8d72-a5e28db13b9c)
+
 ```
 ggplot(data = sleepDay, aes(x = TotalTimeInBed, y =TotalMinutesAsleep)) + 
   geom_point(alpha = 0.50) +
@@ -263,7 +266,9 @@ summary(minSleep_vs_minBed)
 ![lm(TMA~TIB)](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/274fd20c-5c8b-45bb-95ef-bb75ef80e512)
 
 ## [5] Share
-
+### Tableau Dashboard 
+![image](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/f50e6bef-cad5-47ee-b924-8669d9382396)
+Link: [Tableau Dashboard](https://public.tableau.com/shared/W4YXW3HJ8?:display_count=n&:origin=viz_share_link).
 ## [6] Act
 
 
