@@ -180,7 +180,7 @@ ggplot(data = dailyActivity, aes(x = Weekday, y = Calories)) +
   geom_bar(fill = "#3D989B", stat = "identity") +
   labs(title = "Weekday vs Calories")
 ```
-![TS+C](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/75449747-1fbd-482a-887e-fce051e2abdb)
+![TS+C](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/9e9836a0-05ff-46ee-b9db-732c8b8f5328)
 Percentation of user activity minutes seperate into Very Active, Fairly Active, Lightly Active, and Sedentary. Sedentary minutes give the most higher percentage in total activity minutes with 79.41%.
 ```
 ActMinPer <- data.frame(
