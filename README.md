@@ -158,7 +158,7 @@ dataMerged$Weekday <- factor(dataMerged$Weekday,
                                           "Friday", "Saturday", "Sunday"))
 ```
 The dataset has 33 user data from dailyActivity, 24 user from sleepDay and only 8 user from weightLog. From using ```ggplot()``` bar graph, we can see how ofter the user record their data in a weeks. <br>
-![Daily Activity Record During a Weeks](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/42705e73-5e4a-455f-9228-44392ad6043c)
+![Daily Activity Record During a Weeks](https://github.com/BagaskaraRW/Data_Analytics_Bellabeat_Fitness_Company/assets/126551095/0629fca7-74d3-4c71-a841-c4b8af2f7e4b)
 ### Analysis on Daily Activity
 Summary on daily activity. We can see the min, mean, max value of each column in Daily Activity dataset. The summary shows that average steps is 8310 step with the max step is more than 4 times avg i.e. 36000> step. Almost 21 hour activity minutes in one day and burn calories with avg 2360 Cal.
 ```
