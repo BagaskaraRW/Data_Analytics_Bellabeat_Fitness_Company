@@ -278,6 +278,18 @@ Link: [Tableau Dashboard](https://public.tableau.com/shared/W4YXW3HJ8?:display_c
 
 ## [6] Act
 Conclusion:
+- Users have a preference for tracking their activities on weekdays rather than weekends. This is probably because more activities are done outside during the weekday than the weekend.
+- Tuesdays become the most productive day while Sundays become the day most users relax.
+- Sedentary activity has the largest percentage of 79.4% with an average daily time spent on sedentary activities of ± 15 hours, Lightly activity 3.5 hours, Fairly and Very Active under 1 hour.
+- Total activity minutes do not have much effect on calories burned. The difference in total steps by user is seen based on the type of activity.
+- Users take more steps at 8 AM to 10 PM.
+
+Recommendation for Bellabeat Marketing Team:
+1.	Increase data sources for more significant, accurate and reliable statistical analysis. In addition, data should be taken over a longer period of time such as 8 to 12 months. 
+2.	Reduction of data input such as body weight manually can be reduced with an automatic system integrated with wi-fi such as for more complete data and active in updating data to see behavior change from users that can be used in further analysis.
+3.	Bellabeat can shoot applications with health education through short video exercises that can be run by users in everyday life. In addition, bellabeat can also provide health articles in the application that can be user reading material.
+4.	Beat - Point. A point that can be used as an award if collected and obtained if the user completes several daily tasks consistently. This is also expected to complement the data.
+5.	Reminder from the application for users to do short exercises, especially during the weekend.
 
 
 
